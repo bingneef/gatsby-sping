@@ -5661,6 +5661,28 @@ gatsby-plugin-sharp@^2.0.17:
     sharp "^0.21.0"
     svgo "^0.7.2"
 
+gatsby-plugin-sharp@^2.0.18:
+  version "2.0.18"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.18.tgz#5e3af5d53253a5324df23cdfadfc1b423ea0403c"
+  integrity sha512-jpCiCf1WcbfgztLfo+AV+H6lZNpHrunINA+lo4x/JlNlWEdfgtE0AAOAvK5vjINtoqliPctBN/IhPmdNOLzzmQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    async "^2.1.2"
+    bluebird "^3.5.0"
+    fs-exists-cached "^1.0.0"
+    fs-extra "^7.0.0"
+    imagemin "^6.0.0"
+    imagemin-mozjpeg "^8.0.0"
+    imagemin-pngquant "^6.0.0"
+    imagemin-webp "^5.0.0"
+    lodash "^4.17.10"
+    mini-svg-data-uri "^1.0.0"
+    potrace "^2.1.1"
+    probe-image-size "^4.0.0"
+    progress "^1.1.8"
+    sharp "^0.21.0"
+    svgo "^0.7.2"
+
 gatsby-react-router-scroll@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.0.2.tgz#d8046ce2f3bfa52ef6ec55804007d976b0bb6bef"
@@ -8928,7 +8950,7 @@ nan-x@^1.0.0:
   resolved "https://registry.yarnpkg.com/nan-x/-/nan-x-1.0.2.tgz#5f34e9d3115242486219eee3c8bc49fd2425b19a"
   integrity sha512-dndRmy03JQEN+Nh6WjQl7/OstIozeEmrtWe4TE7mEqJ8W8oMD8m2tHjsLPWt//e3hLAeRSbs4pxMyc5pk/nCkQ==
 
-nan@^2.10.0, nan@^2.4.x:
+nan@^2.10.0, nan@^2.12.1, nan@^2.4.x:
   version "2.12.1"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.12.1.tgz#7b1aa193e9aa86057e3c7bbd0ac448e770925552"
   integrity sha512-JY7V6lRkStKcKTvHO5NVSQRv+RV+FIL5pvDoLiAtSL9pKlC5x9PKQcZDsq7m4FO4d57mkhC6Z+QhAh3Jdk5JFw==
@@ -11747,16 +11769,16 @@ sharp@^0.21.0:
     tar "^4.4.6"
     tunnel-agent "^0.6.0"
 
-sharp@^0.21.1:
-  version "0.21.1"
-  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.21.1.tgz#21e3f3a4271039b0e95ac3c58baea475ee6fb661"
-  integrity sha512-XPRi/nosSHk2GG6Zl+uquJ8vZ+00TpNjzrSKah4DGBHYXRxw7nixBBBewJtw3jetUJi0Oaw/n6AO3/myDVVqFg==
+sharp@^0.21.3:
+  version "0.21.3"
+  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.21.3.tgz#381937de66c123687f2ac7186f85921c6bb19cdd"
+  integrity sha512-5qZk8r+YgfyztLEKkNez20Wynq/Uh1oNyP5T/3gTYwt2lBYGs9iDs5m0yVsZEPm8eVBbAJhS08J1wp/g+Ai1Qw==
   dependencies:
     bindings "^1.3.1"
     color "^3.1.0"
     detect-libc "^1.0.3"
     fs-copy-file-sync "^1.1.1"
-    nan "^2.11.1"
+    nan "^2.12.1"
     npmlog "^4.1.2"
     prebuild-install "^5.2.2"
     semver "^5.6.0"
