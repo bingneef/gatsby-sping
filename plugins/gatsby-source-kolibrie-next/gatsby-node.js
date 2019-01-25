@@ -21,7 +21,6 @@ exports.sourceNodes = async ({ actions, store, createNodeId, createContentDigest
     return nodeData
   }
 
-  console.log(configOptions.accessToken);
   let data = await fetch('https://admin-integration.kolibrie-next.nl/feeds/api/v1/jobs', {
     headers: {
       "X-API-KEY": configOptions.accessToken,
