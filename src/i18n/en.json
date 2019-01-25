@@ -1,0 +1,8 @@
+{
+  "hello": "Hello world",
+  "pages": {
+    "index": {
+      "title": "Teammembers"
+    }
+  }
+}
