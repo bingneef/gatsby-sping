@@ -4,18 +4,20 @@ let config = {}
 try {
   // Load the Contentful config from the .contentful.json
   config = require('./.config')
-} catch (_) { }
+} catch (_) {}
 
 // Overwrite the Contentful config with environment variables if they exist
 config.contentful = {
   spaceId: process.env.CONTENTFUL_SPACE_ID || config.contentful.spaceId,
-  accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN || config.contentful.accessToken,
+  accessToken:
+    process.env.CONTENTFUL_DELIVERY_TOKEN || config.contentful.accessToken,
   host: process.env.CONTENTFUL_HOST || undefined,
 }
 
 // Overwrite the KolibrieNext config with environment variables if they exist
 config.kolibrienext = {
-  accessToken: process.env.KOLIBRIENEXT_ACCESS_TOKEN || config.kolibrienext.accessToken,
+  accessToken:
+    process.env.KOLIBRIENEXT_ACCESS_TOKEN || config.kolibrienext.accessToken,
 }
 
 module.exports = {
@@ -78,7 +80,7 @@ module.exports = {
         theme_color: `#2c159d`,
         display: `standalone`,
         icon: `src/assets/icon.png`,
-      }
+      },
     },
     'gatsby-plugin-offline',
   ],
