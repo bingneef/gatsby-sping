@@ -25,6 +25,7 @@ module.exports = {
     title: `Gatsby - Sping`,
   },
   plugins: [
+    'gatsby-plugin-netlify-cache',
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
