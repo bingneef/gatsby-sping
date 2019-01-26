@@ -7,9 +7,13 @@ import Navigation from '../components/navigation'
 import Transition from '../components/transition'
 import './layout.css'
 
-addLocaleData([{locale: 'en'}, {locale: 'nl'}])
+addLocaleData([{ locale: 'en' }, { locale: 'nl' }])
 
-const Wrapper = ({ children, location, pageContext: { translations, locale }}) => (
+const Wrapper = ({
+  children,
+  location,
+  pageContext: { translations, locale },
+}) => (
   <IntlProvider locale={locale} messages={translations}>
     <>
       <Navigation />
@@ -21,6 +25,6 @@ const Wrapper = ({ children, location, pageContext: { translations, locale }}) =
       </Container>
     </>
   </IntlProvider>
-);
+)
 
 export default Wrapper

@@ -1,11 +1,11 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import styles from './footer.module.css';
+import styles from './footer.module.css'
 import Link from '../link'
 
 const Footer = ({ data }) => {
-  const { contentfulFooter:node } = data;
+  const { contentfulFooter: node } = data
 
   return (
     <div className={styles.root}>
@@ -21,9 +21,9 @@ const Footer = ({ data }) => {
       />
       <nav role="navigation">
         <ul className={styles.navigation}>
-          { node.navigation.map(item => (
+          {node.navigation.map(item => (
             <li key={item.slug} className={styles.navigationItem}>
-              <Link to={`/${item.slug}`}>{ item.title }</Link>
+              <Link to={`/${item.slug}`}>{item.title}</Link>
             </li>
           ))}
         </ul>
@@ -40,19 +40,18 @@ const componentQuery = graphql`
         slug
       }
       contactDetails {
-        childContentfulRichText{
+        childContentfulRichText {
           html
         }
       }
       privacyStatement {
-        childContentfulRichText{
+        childContentfulRichText {
           html
         }
       }
     }
   }
 `
-
 
 export default props => (
   <StaticQuery

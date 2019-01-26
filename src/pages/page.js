@@ -9,13 +9,13 @@ import TeamMemberBox from '../components/team-member/box'
 const RootIndex = ({ data, pageContext: { locale } }) => {
   const siteTitle = get(data, 'site.siteMetadata.title')
   const node = get(data, 'allContentfulPage.edges[0].node')
-  const creators = node.creators || [];
-  
+  const creators = node.creators || []
+
   return (
     <>
       <Helmet title={siteTitle} />
       <div className="wrapper">
-        <h2 className="section-headline">{ node.title }</h2>
+        <h2 className="section-headline">{node.title}</h2>
         {/* <p
           dangerouslySetInnerHTML={{
             __html: node.section1.childContentfulRichText.html,
@@ -28,7 +28,9 @@ const RootIndex = ({ data, pageContext: { locale } }) => {
           }}
         />  */}
         <br />
-        { creators.map((node, index) => <TeamMemberBox index={index} key={node.id} {...node} />) }
+        {creators.map((node, index) => (
+          <TeamMemberBox index={index} key={node.id} {...node} />
+        ))}
       </div>
     </>
   )
@@ -38,15 +40,13 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query PageQuery($locale: String = "en") {
-    allContentfulPage(
-      filter: { node_locale: {eq: $locale } }
-    ) {
+    allContentfulPage(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
           title
           sections {
             content {
-              childContentfulRichText{
+              childContentfulRichText {
                 html
               }
             }

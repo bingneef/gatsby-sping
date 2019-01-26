@@ -10,7 +10,9 @@ const card = ({ node }) => {
       <Link to={`/jobs/${node.id}`}>
         <Img alt={node.title} fluid={node.image.childImageSharp.fluid} />
       </Link>
-      <strong>{node.title}  - {node.businessName}</strong>
+      <strong>
+        {node.title} - {node.businessName}
+      </strong>
       <p
         dangerouslySetInnerHTML={{
           __html: node.description,
@@ -20,4 +22,4 @@ const card = ({ node }) => {
   )
 }
 
-export default card;
+export default card

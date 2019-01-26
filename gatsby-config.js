@@ -1,12 +1,10 @@
 const { BLOCKS } = require('@contentful/rich-text-types')
-let config
+let config = {}
 
 try {
   // Load the Contentful config from the .contentful.json
   config = require('./.config')
-} catch (_) {
-  throw new Error('Config not found..')
-}
+} catch (_) { }
 
 // Overwrite the Contentful config with environment variables if they exist
 config.contentful = {

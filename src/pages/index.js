@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl'
 
 import styles from './index.module.css'
-import TeamMemberCard from '../components/team-member/card';
+import TeamMemberCard from '../components/team-member/card'
 
 const RootIndex = ({ data }) => {
   const siteTitle = get(data, 'site.siteMetadata.title')
@@ -19,7 +19,9 @@ const RootIndex = ({ data }) => {
           <FormattedMessage id="pages.index.title" />
         </h2>
         <div className={styles.grid}>
-          {teamMembers.map(({ node }, index) => <TeamMemberCard index={index} key={node.id} {...node} />)}
+          {teamMembers.map(({ node }, index) => (
+            <TeamMemberCard index={index} key={node.id} {...node} />
+          ))}
         </div>
       </div>
     </>
@@ -30,9 +32,7 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query TeamMemberQuery($locale: String!) {
-    allContentfulTeamMember(
-      filter: { node_locale: {eq: $locale } }
-    ) {
+    allContentfulTeamMember(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
           id

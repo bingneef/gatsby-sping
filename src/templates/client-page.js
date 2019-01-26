@@ -15,18 +15,20 @@ const ClientPageTemplate = ({ data }) => {
       <Helmet title={`${node.title} | ${siteTitle}`} />
       <div className="wrapper">
         <h1 className="section-headline">{node.title}</h1>
-        { node.sections.map(node => (
+        {node.sections.map(node => (
           <Fragment key={node.name}>
             <p
               dangerouslySetInnerHTML={{
                 __html: node.content.childContentfulRichText.html,
               }}
             />
-            { node.banner && <Image fluid={node.banner.fluid} /> }
+            {node.banner && <Image fluid={node.banner.fluid} />}
           </Fragment>
         ))}
         <br />
-        {node.creators.map(teamMember => <TeamMemberBox {...teamMember} />)}
+        {node.creators.map(teamMember => (
+          <TeamMemberBox {...teamMember} />
+        ))}
       </div>
     </div>
   )
@@ -36,15 +38,12 @@ export default ClientPageTemplate
 
 export const pageQuery = graphql`
   query ClientPageBySlug($slug: String!, $locale: String!) {
-    contentfulClientPage(
-      slug: { eq: $slug }
-      node_locale: {eq: $locale }
-    ) {
+    contentfulClientPage(slug: { eq: $slug }, node_locale: { eq: $locale }) {
       title
       sections {
         name
         content {
-          childContentfulRichText{
+          childContentfulRichText {
             html
           }
         }
@@ -59,7 +58,7 @@ export const pageQuery = graphql`
         }
       }
       creators {
-        key:id
+        key: id
         name
         jobTitle
         quote
