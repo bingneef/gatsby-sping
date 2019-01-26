@@ -63,5 +63,5 @@ public
 # gatsby cache folder
 .cache
 
-# contentful config file
-.contentful.json
+# config file
+.config.js

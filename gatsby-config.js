@@ -4,12 +4,15 @@ let config
 try {
   // Load the Contentful config from the .contentful.json
   config = require('./.config')
-} catch (_) {}
+} catch (_) {
+  throw new Error('Config not found..')
+}
 
 // Overwrite the Contentful config with environment variables if they exist
 config.contentful = {
   spaceId: process.env.CONTENTFUL_SPACE_ID || config.contentful.spaceId,
   accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN || config.contentful.accessToken,
+  host: process.env.CONTENTFUL_HOST || undefined,
 }
 
 // Overwrite the KolibrieNext config with environment variables if they exist

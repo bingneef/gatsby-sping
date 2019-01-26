@@ -111,7 +111,7 @@ const resolveJobPages = ({ graphql, actions }) => {
         edges: result.data.jobs.edges,
         createPage,
         pageTemplate: path.resolve('./src/templates/jobs/index.js'),
-        pageLength: 2,
+        pageLength: 12,
         pathPrefix: 'jobs',
       });
 
