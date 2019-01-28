@@ -7,7 +7,7 @@ import Image from 'gatsby-image'
 import TeamMemberBox from '../components/team-member/box'
 
 const ClientPageTemplate = ({ data }) => {
-  const node = get(data, 'contentfulClientPage')
+  const node = get(data, 'contentfulContentPage')
   const siteTitle = get(data, 'site.siteMetadata.title')
 
   return (
@@ -38,7 +38,7 @@ export default ClientPageTemplate
 
 export const pageQuery = graphql`
   query ClientPageBySlug($slug: String!, $locale: String!) {
-    contentfulClientPage(slug: { eq: $slug }, node_locale: { eq: $locale }) {
+    contentfulContentPage(slug: { eq: $slug }, node_locale: { eq: $locale }) {
       title
       sections {
         name
