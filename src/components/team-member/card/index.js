@@ -24,7 +24,7 @@ const TeamMemberCard = ({
   description,
 }) => (
   <Card>
-    <Image fluid={profilePicture.fluid} />
+    {profilePicture && <Image fluid={profilePicture.fluid} />}
     <Card.Content>
       <Media>
         <Media.Item>
@@ -36,11 +36,11 @@ const TeamMemberCard = ({
       </Media>
       <Content>
         {specialities && <Tags tags={specialities} />}
-        <p
+        {description && <p
           dangerouslySetInnerHTML={{
             __html: description.childMarkdownRemark.html,
           }}
-        />
+        />}
       </Content>
     </Card.Content>
   </Card>

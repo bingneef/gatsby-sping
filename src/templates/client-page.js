@@ -17,11 +17,11 @@ const ClientPageTemplate = ({ data }) => {
         <h1 className="section-headline">{node.title}</h1>
         {node.sections.map(node => (
           <Fragment key={node.name}>
-            <p
+            {node.content && <p
               dangerouslySetInnerHTML={{
                 __html: node.content.childContentfulRichText.html,
               }}
-            />
+            />}
             {node.banner && <Image fluid={node.banner.fluid} />}
           </Fragment>
         ))}

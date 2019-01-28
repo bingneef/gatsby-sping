@@ -8,7 +8,7 @@ const card = ({ node }) => {
   return (
     <div className={styles.todoItem} key={node.id}>
       <Link to={`/jobs/${node.id}`}>
-        <Img alt={node.title} fluid={node.image.childImageSharp.fluid} />
+        {node.image && <Img alt={node.title} fluid={node.image.childImageSharp.fluid} />}
       </Link>
       <strong>
         {node.title} - {node.businessName}

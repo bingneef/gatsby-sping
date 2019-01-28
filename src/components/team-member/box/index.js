@@ -9,9 +9,11 @@ import styles from './box.module.css'
 const TeamMemberBox = ({ profilePicture, name, jobTitle, quote }) => (
   <Box>
     <Media>
-      <Media.Item className={styles.avatar} renderAs="figure" position="left">
-        <Image fluid={profilePicture.fluid} />
-      </Media.Item>
+      {profilePicture && (
+        <Media.Item className={styles.avatar} renderAs="figure" position="left">
+          <Image fluid={profilePicture.fluid} />
+        </Media.Item>
+      )}
       <Media.Item>
         <Content>
           <p>

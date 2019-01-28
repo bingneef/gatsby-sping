@@ -18,7 +18,7 @@ class JobDetail extends React.Component {
           </h2>
           <div className="article-list">
             <div className={styles.todoItem}>
-              <Img alt={node.title} fluid={node.image.childImageSharp.fluid} />
+              {node.image && <Img alt={node.title} fluid={node.image.childImageSharp.fluid} />}
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.description,
@@ -26,7 +26,7 @@ class JobDetail extends React.Component {
               />
 
               <h2>Location</h2>
-              <img
+              {node.location && (<img
                 src={`https://maps.googleapis.com/maps/api/staticmap?center=${
                   node.location.latitude
                 },${
@@ -36,7 +36,7 @@ class JobDetail extends React.Component {
                 },${
                   node.location.longitude
                 }&key=AIzaSyCrsot7foy5v_F9QimIVkkbGUqgoE8v8ho`}
-              />
+              />)}
 
               <h2>Meer weten?</h2>
               <a href={node.deepLink} target="_blank">

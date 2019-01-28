@@ -16,17 +16,6 @@ const RootIndex = ({ data, pageContext: { locale } }) => {
       <Helmet title={siteTitle} />
       <div className="wrapper">
         <h2 className="section-headline">{node.title}</h2>
-        {/* <p
-          dangerouslySetInnerHTML={{
-            __html: node.section1.childContentfulRichText.html,
-          }}
-        /> 
-        <Image fluid={node.sectionBanner1.fluid} />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: node.section2.childContentfulRichText.html,
-          }}
-        />  */}
         <br />
         {creators.map((node, index) => (
           <TeamMemberBox index={index} key={node.id} {...node} />
