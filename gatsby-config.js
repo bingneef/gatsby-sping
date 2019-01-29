@@ -11,7 +11,7 @@ config.contentful = {
   spaceId: process.env.CONTENTFUL_SPACE_ID || config.contentful.spaceId,
   accessToken:
     process.env.CONTENTFUL_DELIVERY_TOKEN || config.contentful.accessToken,
-  host: process.env.CONTENTFUL_HOST || undefined,
+  host: process.env.GATSBY_CONTENTFUL_HOST || undefined,
 }
 
 // Overwrite the KolibrieNext config with environment variables if they exist
