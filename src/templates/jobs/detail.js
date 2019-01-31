@@ -58,24 +58,24 @@ class JobDetail extends React.Component {
 
 export default JobDetail
 
-export const pageQuery = graphql`
-  query JobDetailQuery($id: String!) {
-    kolibrieNextJob(id: { eq: $id }) {
-      title
-      businessName
-      description
-      deepLink
-      image {
-        childImageSharp {
-          fluid(maxWidth: 1080) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      location {
-        longitude
-        latitude
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query JobDetailQuery($id: String!) {
+//     kolibrieNextJob(id: { eq: $id }) {
+//       title
+//       businessName
+//       description
+//       deepLink
+//       image {
+//         childImageSharp {
+//           fluid(maxWidth: 1080) {
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//       location {
+//         longitude
+//         latitude
+//       }
+//     }
+//   }
+// `

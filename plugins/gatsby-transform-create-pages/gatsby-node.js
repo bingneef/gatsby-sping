@@ -144,6 +144,6 @@ exports.createPages = args => {
   return Promise.all([
     resolvePages(args),
     resolveClientPages(args),
-    resolveJobPages(args),
+    // resolveJobPages(args),
   ])
 }
