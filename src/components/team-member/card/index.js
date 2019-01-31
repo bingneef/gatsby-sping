@@ -36,11 +36,13 @@ const TeamMemberCard = ({
       </Media>
       <Content>
         {specialities && <Tags tags={specialities} />}
-        {description && <p
-          dangerouslySetInnerHTML={{
-            __html: description.childMarkdownRemark.html,
-          }}
-        />}
+        {description && (
+          <p
+            dangerouslySetInnerHTML={{
+              __html: description.childMarkdownRemark.html,
+            }}
+          />
+        )}
       </Content>
     </Card.Content>
   </Card>

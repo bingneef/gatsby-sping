@@ -8,9 +8,9 @@ try {
 
 // Overwrite the Contentful config with environment variables if they exist
 config.contentful = {
-  spaceId: process.env.CONTENTFUL_SPACE_ID || config.contentful.spaceId,
+  spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID || config.contentful.spaceId,
   accessToken:
-    process.env.CONTENTFUL_DELIVERY_TOKEN || config.contentful.accessToken,
+    process.env.GATSBY_CONTENTFUL_DELIVERY_TOKEN || config.contentful.accessToken,
   host: process.env.GATSBY_CONTENTFUL_HOST || undefined,
 }
 
@@ -25,6 +25,7 @@ module.exports = {
     title: `Gatsby - Sping`,
   },
   plugins: [
+    'gatsby-plugin-typescript',
     'gatsby-plugin-netlify-cache',
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',

@@ -8,7 +8,6 @@ import styles from './jobs.module.css'
 class JobDetail extends React.Component {
   render() {
     const node = get(this.props, 'data.kolibrieNextJob')
-    const mapsUrl = ``
     return (
       <div className={styles.root}>
         <Helmet title={'KolibrieNext Favs'} />
@@ -18,7 +17,12 @@ class JobDetail extends React.Component {
           </h2>
           <div className="article-list">
             <div className={styles.todoItem}>
-              {node.image && <Img alt={node.title} fluid={node.image.childImageSharp.fluid} />}
+              {node.image && (
+                <Img
+                  alt={node.title}
+                  fluid={node.image.childImageSharp.fluid}
+                />
+              )}
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.description,
@@ -26,17 +30,19 @@ class JobDetail extends React.Component {
               />
 
               <h2>Location</h2>
-              {node.location && (<img
-                src={`https://maps.googleapis.com/maps/api/staticmap?center=${
-                  node.location.latitude
-                },${
-                  node.location.longitude
-                }&zoom=13&size=1200x300&maptype=roadmap&markers=color:red%7C${
-                  node.location.latitude
-                },${
-                  node.location.longitude
-                }&key=AIzaSyCrsot7foy5v_F9QimIVkkbGUqgoE8v8ho`}
-              />)}
+              {node.location && (
+                <img
+                  src={`https://maps.googleapis.com/maps/api/staticmap?center=${
+                    node.location.latitude
+                  },${
+                    node.location.longitude
+                  }&zoom=13&size=1200x300&maptype=roadmap&markers=color:red%7C${
+                    node.location.latitude
+                  },${
+                    node.location.longitude
+                  }&key=AIzaSyCrsot7foy5v_F9QimIVkkbGUqgoE8v8ho`}
+                />
+              )}
 
               <h2>Meer weten?</h2>
               <a href={node.deepLink} target="_blank">
