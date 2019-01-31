@@ -10,7 +10,7 @@ try {
 config.contentful = {
   spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID || config.contentful.spaceId,
   accessToken:
-    process.env.GATSBY_CONTENTFUL_DELIVERY_TOKEN || config.contentful.accessToken,
+    process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN || config.contentful.accessToken,
   host: process.env.GATSBY_CONTENTFUL_HOST || undefined,
 }
 
