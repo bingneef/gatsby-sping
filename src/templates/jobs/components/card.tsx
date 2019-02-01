@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Img, { FluidObject } from 'gatsby-image'
+import Image, { FluidObject } from 'gatsby-image'
 
 import styles from '../jobs.module.css'
 
-const card = ({ node }: ComponentProps) => {
+const Card = ({ node }: ComponentProps) => {
   return (
-    <div className={styles.todoItem} key={node.id}>
+    <div className={styles.card} key={node.id}>
       <Link to={`/jobs/${node.id}`}>
         {node.image && (
-          <Img alt={node.title} fluid={node.image.childImageSharp.fluid} />
+          <Image alt={node.title} fluid={node.image.childImageSharp.fluid} />
         )}
       </Link>
       <strong>
@@ -24,7 +24,7 @@ const card = ({ node }: ComponentProps) => {
   )
 }
 
-export default card
+export default Card
 
 interface ComponentProps {
   node: {

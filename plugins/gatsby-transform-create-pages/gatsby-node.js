@@ -116,7 +116,7 @@ const resolveJobPages = ({ graphql, actions }) => {
       result.data.jobs.edges.map(({ node }) => {
         createPage({
           path: `/jobs/${node.id}/`,
-          component: path.resolve('./src/templates/jobs/detail.js'),
+          component: path.resolve('./src/templates/jobs/detail.tsx'),
           context: {
             id: node.id,
           },
@@ -144,6 +144,6 @@ exports.createPages = args => {
   return Promise.all([
     resolvePages(args),
     resolveClientPages(args),
-    // resolveJobPages(args),
+    resolveJobPages(args),
   ])
 }

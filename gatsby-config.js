@@ -66,10 +66,10 @@ module.exports = {
         showSpinner: true,
       },
     },
-    // {
-    //   resolve: 'gatsby-source-kolibrie-next',
-    //   options: config.kolibrienext,
-    // },
+    {
+      resolve: 'gatsby-source-kolibrie-next',
+      options: config.kolibrienext,
+    },
     'gatsby-transform-create-pages',
     'gatsby-transform-localise',
     {

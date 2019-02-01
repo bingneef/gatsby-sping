@@ -34,6 +34,7 @@
     "react-transition-group": "^2.5.3"
   },
   "devDependencies": {
+    "@types/react-helmet": "^5.0.8",
     "babel-eslint": "^10.0.1",
     "bit-bin": "^13.0.4",
     "chalk": "^2.4.2",
@@ -68,6 +69,7 @@
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix *.js bin/*.js",
     "postinstall": "node ./bin/hello.js",
     "type-check": "tsc --noEmit",
+    "prettier-check": "prettier --check 'src/**/*.{js,ts,tsx}'",
     "cleanup-repository": "rimraf bin contentful && yarn remove contentful-import chalk inquirer rimraf "
   }
 }

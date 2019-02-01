@@ -22,7 +22,7 @@
   overflow: hidden;
 }
 
-.todoItem {
+.card {
   display: flex;
   flex-direction: column;
 }
